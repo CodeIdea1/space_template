@@ -1,0 +1,626 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-container {
+    width: 97%;
+    margin: 20px auto;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.landing-page {
+    width: 100%;
+    background-image: url('..//images/background1.jpg');
+    background-size: cover;
+    border-radius: 30px;
+    padding: 20px;
+}
+.landing-page .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .menu {
+    width: 110px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px 0px 10px;
+    background-color: white;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: "Pathway Gothic One", sans-serif;
+    font-weight: 300;
+    z-index: 99999999;
+}
+.header .menu .lis {
+    width: 300px;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fdcf9a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-100%);
+    transition: .4s;
+    z-index: 9999999999999999999;
+}
+li, a {
+    text-decoration: none;
+    list-style: none;
+}
+.header .menu .lis li {
+    margin-bottom: 30px;
+}
+.header .menu .lis li a {
+    color: white;
+    font-size: 22px;
+}
+.header .menu:hover .lis{
+    transform: translate(0);
+}
+.header .menu .menu-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #fdce9a;
+}
+.header .menu .menu-icon span:first-child {
+    width: 20px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.582);
+    margin-bottom: 5px;
+}
+.header .menu .menu-icon span:last-child {
+    width: 25px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.582);
+}
+
+.header .right {
+    width: auto;
+    height: 42px;
+    display: flex;
+    align-items: center;
+}
+.header .right .icon {
+    margin-right: 20px;
+}
+.header .right .icon img {
+    width: 42px;
+    border-radius: 50%;
+}
+.header .right .codeidea {
+    width: 140px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-family: "Pathway Gothic One", sans-serif;
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 8px 17px 8px 0px;
+}
+.header .right .codeidea img {
+    width: 35px;
+    height: 35px;
+    border-radius:130px;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 50px;
+}
+.buttons {
+    width: 200px;
+}
+.button {
+    width: 40px;
+    height: 60px;
+    border-radius: 50px;
+    border: 1px solid #fdce9a;
+    margin-bottom: 10px;
+    color: #fdce9a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Pathway Gothic One", sans-serif;
+    cursor: pointer;
+    transition: .4s;
+}
+.button:hover {
+    background-color: #fdce9a;
+    color: white;
+}
+.button.active {
+    background-color: #412a10;
+    color: white;
+}
+.images {
+    display: flex;
+    flex-direction: column;
+}
+
+.images img {
+    margin: 10px 0;
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+
+    .landing-page {
+        background-image: url('..//images/background-mobile.png');
+    }
+    .images img {
+        margin: 5px 0;
+        width: 65px;
+    }
+    .header .menu span {
+        color: #041525;
+    }
+    .header .menu .menu-icon span {
+        color: #041525;
+    }
+    .header .right .codeidea {
+        width: 110px;
+    }
+    .button {
+        width: 33px;
+        height: 55px;
+    }
+    .content {
+        align-items: center;
+        z-index: 9999;
+    }  
+}
+
+.cosmic-connections {
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+.cosmic-connections .head {
+    transform: translateX(-37px);
+    transition: .7s;
+    font-family: "Asap Condensed", sans-serif;
+    color: #041525ef;
+    -webkit-transform: translateX(-37px);
+    -moz-transform: translateX(-37px);
+    -ms-transform: translateX(-37px);
+    -o-transform: translateX(-37px);
+}
+.cosmic-connections .head.translate {
+    transform: translateX(0);
+}
+.cosmic-connections .container {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+.cosmic-connections .circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #fdce9a;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: -80px;
+    border: 18px solid white;
+}
+.cosmic-connections .circle .img {
+    width: 100%;
+    transition: .8s;
+    transform: rotate(360deg);
+}
+.cosmic-connections .circle .img.rotate {
+    transform: rotate(0deg);
+}
+.cosmic-connections .circle::after, .cosmic-connections .circle::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border:  15px solid white;
+    border-top: 55px solid transparent;
+    border-right: 55px solid transparent;
+    border-left: 15px solid transparent;
+    border-radius: 50%;
+}
+.cosmic-connections .circle::before {
+    left: -91px;
+    bottom: 51.3%;
+    transform: rotate(-68deg);
+}
+.cosmic-connections .circle::after {
+    right: -90px;
+    bottom: 51%;
+    transform: rotate(10deg);
+}
+
+
+.cosmic-connections .container .col {
+    display: flex;
+    flex-direction: column;
+}
+.cosmic-connections .container .col1 {
+    width: 30%;
+}
+.cosmic-connections .container .col1 h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 44px;
+    transform: translateX(-40px);
+    transition: .8s;
+    color: #041525;
+}
+.cosmic-connections .container .col1 h1.translate {
+    transform: translateX(0);
+}
+.cosmic-connections .container .col1 p {
+    margin: 20px 0 20px 0;
+    font-size: 19px;
+    color: #04152596;
+    font-family: "Asap Condensed", sans-serif;
+}
+.cosmic-connections .container .col1 .btn {
+    width: 150px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.144);
+    color: #041525;
+    font-family: "Asap Condensed", sans-serif;
+    font-weight: 600;
+}
+.cosmic-connections .container .col1 .social-icons {
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cosmic-connections .container .col1 .social-icons i {
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    border-radius: 50%;
+    padding: 10px;
+    margin-top: 30px;
+    color: #041525;
+    cursor: pointer;
+}
+.cosmic-connections .container .col2 .main-span {
+    margin-left: 50px;
+    margin-top: 64px;
+    color: #041525;
+    font-family: "Asap Condensed", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    text-align: center;
+}
+.cosmic-connections .container .col2 .main-span p{
+    font-size: 20px;
+    font-weight:500;
+}
+.cosmic-connections .container .col2 .people {
+    display: flex;
+    margin: 10px 0 100px 50px;
+}
+.cosmic-connections .container .col2 img {
+    width: 50px;
+    border-radius: 50%;
+    margin-left: -18px;
+    border: 3px solid white;
+}
+.cosmic-connections .container .col2 .more {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: -18px;
+    border: 3px solid white;
+    background-color: #fdce9a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-family: "Asap Condensed", sans-serif;
+    font-weight: 500;
+}
+
+.cosmic-connections .container .col2 .planets {
+    width: 400px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.cosmic-connections .container .col2 .planets .planet {
+    width: 30%;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffe76152;
+    border-radius: 20px;
+    padding: 0 10px 0 10px;
+    transform: translateY(100px);
+    transition: .7s;
+    opacity: 0;
+}
+.cosmic-connections .container .col2 .planets .planet2 {
+    transition: .9s;
+}
+.cosmic-connections .container .col2 .planets .planet3 {
+    transition: 1.3s;
+    font-family: "Asap Condensed", sans-serif;
+}
+.cosmic-connections .container .col2 .planets .planet.translate {
+    transform: translateY(0);
+    font-family: "Asap Condensed", sans-serif;
+
+    opacity: 1;
+}
+.cosmic-connections .container .col2 .planets .planet img {
+    width: 80px;
+    border: none;
+    margin: 0;
+    margin-top: -40px;
+}
+.cosmic-connections .container .col2 .planets .planet p {
+    font-family: "Asap Condensed", sans-serif;
+    margin: 7px 0 7px 0;
+    font-size: 14px;
+    text-align: center;
+    line-height: 3ch;
+    font-weight: 500;
+}
+.cosmic-connections .container .col2 .planets .planet .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 38px;
+}
+.cosmic-connections .container .col2 .planets .planet .arrow img {
+    width: 32px;
+    background-color: #041525;
+    border-radius: 50%;
+    padding: 9px;
+}
+
+.cosmic-connections .container .col3{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.cosmic-connections .container .col3 .boxes .box {
+    width: 100%;
+    height: 188px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-size: cover;
+    transform: translateX(40px);
+    transition: .7s;
+    padding: 20px;
+}
+.cosmic-connections .container .col3 .boxes .box .col {
+    color: white;
+    width: 50%;
+}
+.cosmic-connections .container .col3 .boxes .box .col p {
+    color: rgba(255, 255, 255, 0.808);
+    font-size: 17px;
+}
+.cosmic-connections .container .col3 .boxes .box .col a {
+    color: black;
+    background-color: white;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 30px;
+    border-radius: 20px;
+    font-family: "Asap Condensed", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+.cosmic-connections .container .col3 .boxes .box .col p {
+    font-family: "Asap Condensed", sans-serif;
+    margin-top: -.5px;
+}
+.cosmic-connections .container .col3 .boxes .box2 {
+    transition: 1.7s;
+}
+.cosmic-connections .container .col3 .boxes .box.translate {
+    transform: translateX(0);
+}
+.cosmic-connections .container .col3 .boxes .box1 {
+    background-image: url('..//images/box1.png');
+    margin-bottom: 17px;
+}
+.cosmic-connections .container .col3 .boxes .box2 {
+    background-image: url('..//images/box2.PNG');
+}
+.cosmic-connections .container .col3 .boxes .box .col2 {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+}
+.cosmic-connections .container .col3 .boxes .box .col2 .people {
+    margin: 0;
+    width: auto;
+    margin-bottom: 5px;
+    text-align: start;
+}
+.cosmic-connections .container .col3 .boxes .box .col2 .people img {
+    width: 30px;
+    height: 30px;
+    border: none;
+    margin: 0;
+    margin-left: -10px;
+    align-items: end;
+    justify-content: end;
+}
+.cosmic-connections .container .col3 .boxes .box .col2 .travel {
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Asap Condensed", sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+}
+@media (max-width: 1100px) {
+    .cosmic-connections {
+        background-image: url('..//css/wave-haikei\ \(5\).svg');
+        background-size: cover;
+    }
+    .cosmic-connections .head.translate2 {
+        transform: translateX(0);
+    }
+    .cosmic-connections .head {
+        margin-top: 100px;
+    }
+    .cosmic-connections .container {
+        flex-direction: column;
+        width: 90%;
+    }
+    .cosmic-connections .circle {
+        width: 160px;
+        height: 160px;
+        top: -65px;
+        border: 17px solid white;
+    }
+    .cosmic-connections .circle::before {
+        left: -91px;
+        bottom: 48.7%;
+    }
+    .cosmic-connections .container .col1 {
+        width: 100%;
+    }
+    .cosmic-connections .container .col1 .title .h1 {
+        transform: translateX(-30px);
+        transition: .9s;
+        font-weight: 400;
+        width: 90%;
+    }   
+    .cosmic-connections .container .col1 .title .h1.translate {
+        transform: translateX(0);
+    }
+    .images {
+        height: 100%;
+    }
+    .cosmic-connections .head h3 {
+        color: #041525;
+    }
+    .cosmic-connections .container .col1 h1 {
+        font-size: 29px;
+        color:#041525;
+    }
+    .cosmic-connections .container .col1 p {
+        font-size: 17px;
+        width: 80%;
+        margin-top: 8px;
+    }
+    .cosmic-connections .container .col1 .btn {
+        width: 134px;
+        padding: 13px;
+        font-size: 15px;
+        background-color: white;
+        color: #041525;
+    }
+    .cosmic-connections .container .col1 .social-icons i {
+        margin: 30px 0 30px 0;
+        background-color: white;
+    }
+    .cosmic-connections .container .col2 {
+        width: 100%;
+        align-items: center;
+    }
+    .cosmic-connections .container .col2 .main-span {
+        margin-left: 0;
+        margin-top: 0;
+        color: white;
+        font-family: "Asap Condensed", sans-serif;
+    }
+    .cosmic-connections .container .col2 span {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        margin-bottom: 10px;
+    }
+    .cosmic-connections .container .col2 .people {
+        margin: 10px 15px 90px 50px;
+        width: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+    }
+    .cosmic-connections .container .col2 .more {
+        color: #041525;
+    }
+    .cosmic-connections .container .col2 .planets{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 0px;
+        padding: 0;
+        flex-direction: column;
+    }
+    .cosmic-connections .container .col2 .planets .planet {
+        width: 100%;
+        background-color: white;
+        margin-bottom: 70px;
+        transform: translateX(30px);
+    }
+    .cosmic-connections .container .col2 .planets .planet.translate2 {
+        transform: translateX(0);
+    }
+    .cosmic-connections .container .col2 .planets .planet .arrow {
+        margin-top: 58px;
+    }
+    .cosmic-connections .container .col2 .planets .planet h3 {
+        font-size: 12px;
+        color: #041525;
+    }
+    .cosmic-connections .container .col2 .planets .planet img {
+        width: 80px;
+        filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.432));
+    }
+    .cosmic-connections .container {
+        width: 100%;
+        align-items: center;
+    }
+    .cosmic-connections .container .col3 {
+        width: 100%;
+    }
+    .cosmic-connections .container .col3 .boxes {
+        width: 100%;
+    }
+}
+
+
